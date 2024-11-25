@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cadastro de Conteúdos</title>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/styles.css') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/newdocument.css') }}"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Cadastro de Conteúdos</h1>
+			<form id="contentForm" method="POST">
+				<div class="input-group">
+					<label for="title">Nome do arquivo</label>
+					<input
+						type="text"
+						id="title"
+						name="title"
+						placeholder="Digite o nome do arquivo"
+						required
+					/>
+				</div>
+				<div class="input-group">
+					<label for="cadeira">Categoria</label>
+					<select id="cadeira" name="cadeira" required>
+						<option value="" disabled selected>
+							Selecione uma cadeira
+						</option>
+						{% for id, name in cadeiras %}
+						<option value="{{ id }}">{{ name }}</option>
+						{% endfor %}
+					</select>
+				</div>
+				<div class="input-group">
+					<label for="content">Conteúdo (Arquivo)</label>
+					<input
+						type="file"
+						id="content"
+						name="content"
+						accept=".pdf"
+						required
+					/>
+				</div>
+				<button type="submit" class="btn">Cadastrar</button>
+			</form>
+			<div
+				id="successMessage"
+				class="success-message"
+				style="display: none"
+			>
+				Conteúdo cadastrado com sucesso!
+			</div>
+		</div>
+
+		<script src="{{ url_for('static', filename='js/newdocument.js') }}"></script>
+	</body>
+</html>

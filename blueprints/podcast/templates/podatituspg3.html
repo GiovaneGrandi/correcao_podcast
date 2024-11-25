@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PodAtitus</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/podatitusstyle3.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <button class="home-btn">
+        <img src="{{ url_for('static', filename='img/casa.png') }}" style="width: 30px;">
+      </button>
+      <h1>PodAtitus</h1>
+      <button class="profile-btn">
+        <img src="{{ url_for('static', filename='img/do-utilizador.png') }}" style="width: 30px;">
+      </button>
+    </header>
+
+    <main class="main">
+      <div class="podcast-icon">
+        <img src="{{ url_for('static', filename='img/microfone.png') }}">
+      </div>
+
+      <div class="controls">
+        <!-- Player de áudio -->
+        <audio controls>
+          <source src="{{ url_for('static', filename='podcasts/podcast.mp3') }}" type="audio/mpeg">
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
+      </div>
+
+      <!-- Se quiser exibir o texto transcrito, você pode adicioná-lo aqui -->
+      <div class="text-box">
+        <!-- Conteúdo do podcast (transcrição) -->
+        <!-- Você pode passar a transcrição como variável para o template -->
+        <!-- Exemplo:
+        {% for paragraph in transcript %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+        -->
+      </div>
+    </main>
+  </div>
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</body>
+</html>

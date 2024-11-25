@@ -1,0 +1,127 @@
+.container {
+	width: 100%;
+	max-width: 500px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #ddd;
+}
+
+.input-group {
+	margin-bottom: 15px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	color: #ddd;
+	font-size: 14px;
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	background-color: #bbb;
+	outline: none;
+}
+
+input:focus {
+	border-color: #8f00ff;
+	background-color: #ccc;
+}
+
+.btn {
+	width: 100%;
+	padding: 10px;
+	background-color: #8f00ff;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	text-align: center;
+}
+
+.btn:hover {
+	background-color: #3a0066;
+}
+
+.success-message {
+	margin-top: 20px;
+	text-align: center;
+	color: lawngreen;
+	font-size: 16px;
+}
+
+input[type="file"] {
+	width: 100%;
+	padding: 0px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	background-color: #bbb;
+	outline: none;
+	cursor: pointer;
+	display: inline-block; /* Para que o botão de upload fique inline com o texto */
+}
+
+input[type="file"]:focus {
+	border-color: #8f00ff;
+	background-color: #ccc;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+	background-color: #8f00ff; /* Cor do botão */
+	color: white; /* Cor do texto do botão */
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+input[type="file"]:hover::-webkit-file-upload-button {
+	background-color: #3a0066; /* Efeito hover no botão */
+}
+
+input[type="file"]:focus::-webkit-file-upload-button {
+	background-color: #8f00ff; /* Foco no botão */
+}
+
+input[type="file"]::before {
+	content: "Selecione um arquivo"; /* Texto do botão */
+	display: inline-block;
+	padding: 10px 0px;
+	border-radius: 5px;
+	background-color: #8f00ff;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+	width: 100%;
+}
+
+select {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	background-color: #bbb;
+	outline: none;
+}
+
+select:focus {
+	border-color: #8f00ff;
+	background-color: #ccc;
+}

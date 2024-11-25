@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PodAtitus - Conteúdos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/podatitusstyle2.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <button class="home-btn">
+        <img src="{{ url_for('static', filename='img/casa.png') }}" style="width: 30px;">
+      </button>
+      <h1>PODATITUS</h1>
+      <button class="profile-btn">
+        <img src="{{ url_for('static', filename='img/do-utilizador.png') }}" style="width: 30px;">
+      </button>
+    </div>
+    <div class="content">
+      <h2>Materiais de Estudo</h2>
+      <form action="{{ url_for('podcast.generate_podcast_route') }}" method="post">
+        <div class="study-list">
+          {% for pdf in pdfs %}
+          <div class="study-item">
+            <input type="checkbox" id="item{{ pdf['id'] }}" name="selected_pdfs" value="{{ pdf['id'] }}">
+            <label for="item{{ pdf['id'] }}">
+              {{ pdf['title'] }}
+            </label>
+          </div>
+          {% endfor %}
+        </div>
+        <button type="submit" class="btn finalize-btn">Concluir seleção de Conteúdo</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

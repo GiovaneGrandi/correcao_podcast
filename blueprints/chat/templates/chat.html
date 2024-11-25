@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>IAtitus</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='css/styles.css') }}"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='css/chat.css') }}"
+		/>
+	</head>
+	<body>
+		<header class="cabecalho-box">
+			<button class="header-btn">
+				<img
+					class="icones-header"
+					src="{{ url_for('static', filename='img/casa.png') }}"
+				/>
+			</button>
+			<button class="header-btn">
+				<img
+					class="icones-header"
+					src="{{ url_for('static', filename='img/do-utilizador.png') }}"
+				/>
+			</button>
+		</header>
+		<nav class="menu-lateral">
+			<h2 id="titulo">IAtitus</h2>
+			<ul class="content-menu">
+				<li id="item1">Big Data</li>
+				<li id="item2">Gestão de Projetos - PMBOK</li>
+				<li id="item3">IA e Machine Learning</li>
+				<button class="conversa-btn">Nova Conversa +</button>
+			</ul>
+		</nav>
+		<div class="chat-container">
+			<div id="chat-box" class="chat-box"></div>
+			<div class="input-area">
+				<input
+					type="text"
+					id="user-input"
+					placeholder="Escreva sua mensagem..."
+					autocomplete="off"
+				/>
+				<button class="chat-btn">
+					<img
+						class="icones-chat"
+						src="{{ url_for('static', filename='img/aviao-de-papel.png') }}"
+					/>
+				</button>
+				<button class="chat-btn">
+					<img
+						class="icones-chat"
+						src="{{ url_for('static', filename='img/grampo.png') }}"
+					/>
+				</button>
+			</div>
+		</div>
+
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+	</body>
+</html>

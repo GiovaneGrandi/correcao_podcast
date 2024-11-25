@@ -1,0 +1,83 @@
+.container {
+	width: 90%;
+	max-width: 600px;
+	background-color: #1c1b33;
+	color: white;
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.home-btn,
+.profile-btn {
+	background-color: rgb(184, 184, 185);
+	cursor: pointer;
+	border-radius: 65%;
+	height: 45px;
+}
+
+h1 {
+	font-size: 2rem;
+	color: #a445f7;
+	text-align: center;
+}
+
+.subtitle {
+	font-size: 1rem;
+	text-align: center;
+	margin: 10px 0 20px;
+}
+
+.content h2 {
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+.podcast-form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+label {
+	font-size: 1rem;
+	color: #ddd;
+}
+
+select,
+input {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	font-size: 1rem;
+}
+
+.btn {
+	background-color: #a445f7;
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #8a2cdb;
+}
+
+.generate-btn {
+	background-color: #9a2dd5;
+	color: black;
+}
+
+.generate-btn:hover {
+	background-color: #9a2dd5;
+}

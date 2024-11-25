@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PodAtitus</title>
+  <link rel="stylesheet" href="/css/podatitusstyle.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <button class="home-btn">
+        <img src="/img/casa.png" style="width: 30px;">
+      </button>
+      <h1>PODATITUS</h1>
+      <button class="profile-btn">
+        <img src="/img/do-utilizador.png" style="width: 30px;">
+      </button>
+    </div>
+    <div class="content">
+      <p class="subtitle">
+        Uma das melhores formas de estudar é ouvindo um debate sobre o assunto!
+      </p>
+      <h2>Sobre o que será nosso PodAtitus de hoje?</h2>
+      <form class="podcast-form">
+        <label for="subject">Matéria</label>
+        <select id="subject" name="subject">
+          <option value="matematica">Matemática</option>
+          <option value="portugues">Português</option>
+          <option value="fisica">Física</option>
+          <option value="quimica">Química</option>
+        </select>
+        <label for="podcast-name">Dê um nome para o nosso debate!</label>
+        <input type="text" id="podcast-name" name="podcast-name" placeholder="Ex.: Revisão para prova">
+        <button type="button" class="btn select-btn">Selecionar Conteúdos</button>
+        <button type="submit" class="btn generate-btn">GERAR PODCAST</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
